@@ -1,4 +1,5 @@
 <launch>
-        <node pkg="ATG_sim" name="atg_data_node" type="atg_data_node.py" />
-        <include file="$(find gazebo_worlds)/launch/empty_world.launch"/>
+        <node pkg="atg_sim" name="atg_data_node" type="atg_data_node.py" >
+          <param name = "data_path" value = "$(find atg_sim)/data/"/>
+        </node>
 </launch>
